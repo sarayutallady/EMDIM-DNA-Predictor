@@ -1,0 +1,59 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pt
+*.h5
+*.joblib
+
+# =========================
+# Virtual Environments
+# =========================
+venv/
+ENV/
+env/
+.venv/
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# System Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs and temp
+# =========================
+*.log
+*.tmp
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Env and secrets
+# =========================
+.env
+.env.*
+
+# =========================
+# Allow datasets!
+# (Don't ignore .csv)
+# =========================
+# (Intentionally left blank so your clinvar_dataset_20k.csv gets uploaded)
