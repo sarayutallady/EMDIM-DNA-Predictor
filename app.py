@@ -47,7 +47,7 @@ This tool helps you analyze DNA sequences to:
 
 ---
 
-#Made with ❤️ for real DNA explainability.
+Made with ❤️ for real DNA explainability.
 """)
 
 # === EXAMPLE DNA SEQUENCE ===
