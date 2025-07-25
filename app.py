@@ -50,13 +50,30 @@ This tool helps you analyze DNA sequences to:
 Made with ❤️ for real DNA explainability.
 """)
 
-# === INPUT DNA SEQUENCE ===
-st.subheader("📥 Paste Your DNA Sequence")
+# === EXAMPLE DNA SEQUENCE ===
 default_example = (
     "ACGTAGTCGATCGTAGCTAGCTGATCGATCGATGCTAGCTAGCTAGCTAGCATGCTAGCATGCTAGCTAGCTGATCGATCGATGCTAGCTAGC"
     "TACGTAGTCGATCGTAGCTAGCTGATCGATCGATGCTAGCTAGCTAGCTAGCATGCTAGCATGCTAGCTAGCTGATCGATCGATGCTAGCTAGC"
 )
-sequence = st.text_area("Only characters A, C, G, T are allowed (~256 bp recommended)", value=default_example).strip().upper()
+
+# === INPUT DNA SEQUENCE ===
+st.subheader("📥 Paste Your DNA Sequence")
+
+# Session state flag to control example loading
+if 'example_loaded' not in st.session_state:
+    st.session_state.example_loaded = False
+
+# Load Example Button
+if st.button("🧬 Click here to load an example DNA sequence"):
+    st.session_state.example_loaded = True
+
+# Display text area with example only if loaded
+sequence = st.text_area(
+    "Only characters A, C, G, T are allowed (~256 bp recommended)",
+    value=default_example if st.session_state.example_loaded else "",
+    height=120,
+    max_chars=300
+).strip().upper()
 
 # === RUN PREDICTION ===
 if sequence and st.button("🔍 Predict"):
