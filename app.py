@@ -45,10 +45,7 @@ This tool helps you analyze DNA sequences to:
 
 ✅ Works best with ~256 base pairs.
 
----
-
-Made with ❤️ for real DNA explainability.
-""")
+)
 
 # === EXAMPLE DNA SEQUENCE ===
 default_example = (
